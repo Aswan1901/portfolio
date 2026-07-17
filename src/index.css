@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-cream: #faf8f2;
+  --color-accent: #a78bfa;
+  --color-accent-dark: #8b5cf6;
+  --color-text: #6b6375;
+  --color-text-heading: #08060d;
+  --color-border: #e5e4e7;
+
+  --font-serif: 'Playfair Display', serif;
+  --font-script: 'Alex Brush', cursive;
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  @apply bg-cream text-text font-sans;
+}
+
+.dark body {
+  background: #16171d;
+  color: #9ca3af;
+}
+
+:root {
+  --bg: #faf8f2;
+  --card: #efece3;
+  --accent-bg: rgba(167, 139, 250, 0.12);
+  --text: #6b6375;
+  --text-heading: #08060d;
+  --border: #e5e4e7;
+  --accent: #a78bfa;
+  --accent-dark: #8b5cf6;
+}
+
+
+.dark {
+  --bg: #16171d;
+  --card: #1f2028;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --text: #9ca3af;
+  --text-heading: #f3f4f6;
+  --border: #2e303a;
+  --accent: #c084fc;
+  --accent-dark: #a855f7;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-accent-bg: var(--accent-bg);
+  --color-text: var(--text);
+  --color-text-heading: var(--text-heading);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+}
